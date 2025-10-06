@@ -14,6 +14,11 @@ const age = Number(prompt("Qual è l'età del passeggero?"));
 // Avrei potuto usare anche parseInt()
 console.log(distance, age);
 
+// Controlla gli input
+if (distance < 0 || age < 0) {
+	console.error("Input inaspettati");
+}
+
 // Calcola il biglietto
 // Il prezzo del biglietto è definito in base ai km (0.21 € al km)
 let cost = distance * 0.21;
@@ -30,5 +35,5 @@ if (age >= 65) {
 console.log(cost.toFixed(2));
 
 // Test
-// 100km, 10 anni => prezzo corretto:  €16.80
+// 100km, 10 anni => prezzo corretto: €16.80
 // 100km, 70 anni => prezzo corretto: €12.60
