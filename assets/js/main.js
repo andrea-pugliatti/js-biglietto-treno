@@ -7,6 +7,12 @@
 */
 
 // Chiedi all'utente il numero di chilometri che vuole percorrere e l'età del passeggero
+const distance = Number(
+	prompt("Quanti chilometri vuole percorrere il passeggero?"),
+);
+const age = Number(prompt("Qual è l'età del passeggero?"));
+// Avrei potuto usare anche parseInt()
+console.log(distance, age);
 
 // Calcola il biglietto
 
