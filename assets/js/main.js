@@ -15,8 +15,9 @@ const age = Number(prompt("Qual è l'età del passeggero?"));
 console.log(distance, age);
 
 // Controlla gli input
+let bad_input = false;
 if (distance < 0 || age < 0) {
-	console.error("Input inaspettati");
+	bad_input = true;
 }
 
 // Calcola il biglietto
@@ -32,7 +33,11 @@ if (age >= 65) {
 }
 
 // L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali)
-console.log(cost.toFixed(2));
+if (bad_input) {
+	console.error("Input inaspettati");
+} else {
+	console.log(cost.toFixed(2));
+}
 
 // Test
 // 100km, 10 anni => prezzo corretto: €16.80
