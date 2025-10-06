@@ -26,4 +26,9 @@ if (age >= 65) {
 	cost -= cost * 0.4;
 }
 
-// L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo)
+// L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali)
+console.log(cost.toFixed(2));
+
+// Test
+// 100km, 10 anni => prezzo corretto:  €16.80
+// 100km, 70 anni => prezzo corretto: €12.60
